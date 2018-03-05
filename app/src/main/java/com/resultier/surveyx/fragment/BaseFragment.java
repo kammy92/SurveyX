@@ -55,12 +55,9 @@ import java.util.Map;
 
 
 public class BaseFragment extends android.support.v4.app.Fragment {
-
-
     private int page;
     private Button btNext;
     private Button btPrev;
-
 
     public static BaseFragment newInstance(int page) {
         BaseFragment fragmentFirst = new BaseFragment();
@@ -81,7 +78,6 @@ public class BaseFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view;
-
         view = inflater.inflate(R.layout.fragment_first, container, false);
         initView(view);
         initListener();
@@ -109,65 +105,57 @@ public class BaseFragment extends android.support.v4.app.Fragment {
         return view;
     }
 
-    public boolean isPackageExists (String targetPackage) {
+    public boolean isPackageExists(String targetPackage) {
         List<ApplicationInfo> packages;
         PackageManager pm;
-        pm = getActivity ().getPackageManager ();
-        packages = pm.getInstalledApplications (0);
+        pm = getActivity().getPackageManager();
+        packages = pm.getInstalledApplications(0);
         for (ApplicationInfo packageInfo : packages) {
-            if (packageInfo.packageName.equals (targetPackage))
+            if (packageInfo.packageName.equals(targetPackage))
                 return true;
         }
         return false;
     }
 
 
-
-
     @Override
-    public void onDestroyView () {
-        super.onDestroyView ();
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 
-    private void initView (View view) {
+    private void initView(View view) {
 
-        btNext = (Button) view.findViewById (R.id.btNextInFragment);
-        btPrev = (Button) view.findViewById (R.id.btPrevInFragment);
-
-
+        btNext = (Button) view.findViewById(R.id.btNextInFragment);
+        btPrev = (Button) view.findViewById(R.id.btPrevInFragment);
 
 
     }
 
-    private void initListener () {
-        btNext.setOnClickListener (new View.OnClickListener () {
+    private void initListener() {
+        btNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v) {
+            public void onClick(View v) {
 //                Utils.hideSoftKeyboard (getActivity ());
-                if (page == Constants.questionsList.size () - 1) {
+                if (page == Constants.questionsList.size() - 1) {
 //                        Utils.showToast (getActivity (), "Last page");
-                        Utils.showLog (Log.INFO, "Page :", "Last page", true);
+                    Utils.showLog(Log.INFO, "Page :", "Last page", true);
 
 
-                  } else {
-                ViewPagerActivity.nextPage ();
-            }
+                } else {
+                    ViewPagerActivity.nextPage();
+                }
             }
         });
-        btPrev.setOnClickListener (new View.OnClickListener () {
+        btPrev.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v) {
-               // Utils.hideSoftKeyboard (getActivity ());
-                ViewPagerActivity.prevPage ();
+            public void onClick(View v) {
+                // Utils.hideSoftKeyboard (getActivity ());
+                ViewPagerActivity.prevPage();
             }
         });
-
-
 
 
     }
-
-
 
 
 }
