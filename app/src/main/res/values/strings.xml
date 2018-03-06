@@ -96,5 +96,30 @@
     <string name="dialog_enter_product_description">Please Enter Product Description</string>
 
 
+    <string name="question1">About what time did you wake up today?</string>
+    <string name="question2">About what time did you have your first tobacco product today?</string>
+    <string name="question3">What was the first tobacco product you used today?</string>
+    <string name="question4">If you checked Moist smokeless/dip, which product did you use as your
+        first tobacco product today?
+    </string>
+    <string name="question5">Total number of times you used the pouches</string>
+    <string name="question6">Total number of pouches you used today</string>
+    <string name="question7">What was the least amount of time in minutes you kept the pouches
+        provided to you in your mouth today?
+    </string>
+    <string name="question8">What was the most amount of time in minutes you kept the pouches
+        provided to you in your mouth today?
+    </string>
+    <string name="question9">Total number of times you used the loose product today:</string>
+    <string name="question10">Approximately how much of a can of your own loose product did you use
+        today:
+    </string>
+    <string name="question11">What was the least amount of time in minutes you kept your own loose
+        dip in your mouth today?
+    </string>
+    <string name="question12">What was the most amount of time in minutes you kept your own loose
+        dip in your mouth today?
+    </string>
+
 
 </resources>

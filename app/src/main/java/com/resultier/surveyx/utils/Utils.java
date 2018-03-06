@@ -20,9 +20,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
-import android.support.design.internal.BottomNavigationItemView;
-import android.support.design.internal.BottomNavigationMenuView;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -49,14 +46,12 @@ import com.android.volley.toolbox.StringRequest;
 import com.resultier.surveyx.R;
 import com.resultier.surveyx.app.AppController;
 
-
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.MessageDigest;
@@ -162,8 +157,8 @@ public class Utils {
         sbView.setBackgroundColor (activity.getResources ().getColor (R.color.accent2));
         TextView textView = (TextView) sbView.findViewById (android.support.design.R.id.snackbar_text);
         TextView textView2 = (TextView) sbView.findViewById (android.support.design.R.id.snackbar_action);
-        textView.setTextColor (activity.getResources ().getColor (R.color.tertiary_text2));
-        textView2.setTextColor (activity.getResources ().getColor (R.color.tertiary_text2));
+        textView.setTextColor (activity.getResources ().getColor (R.color.tertiary_text));
+        textView2.setTextColor (activity.getResources ().getColor (R.color.tertiary_text));
         textView.setTypeface (SetTypeFace.getTypeface (activity));
         textView2.setTypeface (SetTypeFace.getTypeface (activity));
         snackbar.show ();

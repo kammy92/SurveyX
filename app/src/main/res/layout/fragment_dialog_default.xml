@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/clMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_color_white">
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/activity_margin"
+            android:src="@drawable/ic_close"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivCancel"
+            android:layout_alignTop="@+id/ivCancel"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Survey"
+            android:textColor="@color/primary_text2"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"/>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ivCancel"
+            android:background="@color/text_color_grey_light2"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v1">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin">
+
+                <TextView
+                    android:id="@+id/tvQuestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/question1"
+                    android:textColor="@color/primary_text2"
+                    android:textSize="@dimen/text_size_medium"/>
+
+
+                <EditText
+                    android:id="@+id/etQuestion1Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvQuestion1"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/et_background"
+                    android:focusable="false"
+                    android:hint="12:00 AM"
+                    android:textColor="@color/primary_text2"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvQuestion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etQuestion1Date"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:gravity="center"
+                    android:text="@string/question2"
+                    android:textColor="@color/primary_text2"
+                    android:textSize="@dimen/text_size_medium"/>
+
+                <EditText
+                    android:id="@+id/etQuestion2Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvQuestion2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:background="@drawable/et_background"
+                    android:focusable="false"
+                    android:hint="12:00 AM"
+                    android:textColor="@color/primary_text2"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/tvQuestion3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etQuestion2Date"
+                    android:layout_marginTop="@dimen/activity_margin"
+                    android:gravity="center"
+                    android:text="@string/question3"
+                    android:textColor="@color/primary_text2"
+                    android:textSize="@dimen/text_size_medium"/>
+
+
+                <LinearLayout
+                    android:id="@+id/tbCheckBoxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvQuestion3"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <CheckBox
+                            android:id="@+id/cb1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cigarettes"
+                            android:textColor="@color/primary_text2"/>
+
+
+                        <CheckBox
+                            android:id="@+id/cb2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:text="Chewing Tobacco"
+                            android:textColor="@color/primary_text2"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/cb3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cigars/Cigarillos"
+                            android:textColor="@color/primary_text2"/>
+
+
+                        <CheckBox
+                            android:id="@+id/cb4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Snus Pouches"
+                            android:textColor="@color/primary_text2"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <CheckBox
+                            android:id="@+id/cb5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="5dp"
+                            android:text="e-Cigarettes &amp; other e vapor"
+                            android:textColor="@color/primary_text2"/>
+
+
+                        <CheckBox
+                            android:id="@+id/cb6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Moist smokeless"
+                            android:textColor="@color/primary_text2"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlQuestion4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tbCheckBoxes"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/tvQuestion4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/activity_margin"
+                        android:gravity="center"
+                        android:text="@string/question4"
+                        android:textColor="@color/primary_text2"
+                        android:textSize="@dimen/text_size_medium"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/llCheckBoxes2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tvQuestion4"
+                        android:orientation="vertical">
+
+
+                        <CheckBox
+                            android:id="@+id/cb7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="The Pouch Product Provided to you"
+                            android:textColor="@color/primary_text2"/>
+
+                        <CheckBox
+                            android:id="@+id/cb8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your OWN Loose Product"
+                            android:textColor="@color/primary_text2"/>
+
+                        <CheckBox
+                            android:id="@+id/cb9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your OWN Pouch Product"
+                            android:textColor="@color/primary_text2"/>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

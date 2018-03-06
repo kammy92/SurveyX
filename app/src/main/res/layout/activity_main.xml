@@ -1,19 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/clMain"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.resultier.surveyx.activity.MainActivity">
+    android:background="@color/text_color_white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:animateLayoutChanges="true"
+        android:background="@color/primary"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:visibility="visible"
+        app:elevation="0dp"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar1"
+            style="@style/Widget.MyApp.ActionBar"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:layout_collapseMode="parallax">
+
+            <RelativeLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_marginLeft="@dimen/activity_margin"
+                    android:layout_marginRight="@dimen/activity_margin"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Day : 1"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/activity_margin_extra_small"
+                        android:text="06/03/2018"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvProductCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin"
+                    android:layout_marginLeft="@dimen/activity_margin"
+                    android:layout_marginRight="@dimen/activity_margin"
+                    android:layout_marginStart="@dimen/activity_margin"
+                    android:gravity="center_vertical"
+                    android:text="Prod # KGF12343"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/btFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:padding="@dimen/activity_margin"
+                    android:text="FILTER"
+                    android:textColor="@color/text_color_black"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_color_grey_light2"/>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tvEndDay"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/rlButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin"
+                android:background="@drawable/circle_button">
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:padding="@dimen/activity_margin"
+                    android:text="POUCH PRODUCT PROVIDED"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tvNumber1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin_small"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin"
+                android:background="@drawable/circle_button">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_button"
+                    android:gravity="left"
+                    android:padding="@dimen/activity_margin"
+                    android:text="YOUR OWN LOOSE PRODUCT"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tvNumber2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin_small"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin"
+                android:background="@drawable/circle_button">
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_button"
+                    android:gravity="left"
+                    android:padding="@dimen/activity_margin"
+                    android:text="DIFFERENT TOBACCO PRODUCT"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tvNumber3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin_small"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin"
+                android:background="@drawable/circle_button">
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_button"
+                    android:gravity="left"
+                    android:padding="@dimen/activity_margin"
+                    android:text="YOUR OWN POUCH PRODUCT"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tvNumber4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/activity_margin_small"
+                    android:background="@drawable/circle"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvEndDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/circle_button"
+            android:gravity="center"
+            android:padding="@dimen/activity_margin"
+            android:text="END DAY"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
