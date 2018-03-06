@@ -3,10 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SurveyX.iml" filepath="$PROJECT_DIR$/SurveyX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/SurveyX.iml" filepath="$PROJECT_DIR$/.idea/SurveyX.iml" />
-      <module fileurl="file://E:\SarveyX\SarveyX\SurveyX\SurveyX.iml" filepath="E:\SarveyX\SarveyX\SurveyX\SurveyX.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\SarveyX\SarveyX\SurveyX\app\app.iml" filepath="E:\SarveyX\SarveyX\SurveyX\app\app.iml" />
     </modules>
   </component>
 </project>
