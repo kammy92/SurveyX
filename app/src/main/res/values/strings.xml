@@ -208,24 +208,18 @@
         you used today?
     </string>
 
-
-    <string name="question17">Make a check mark each time you use your own pouches:</string>
-    <string name="question18">Mark the number of pouches you used each time:</string>
-    <string name="question19">Total number of times you used the pouches today</string>
-    <string name="question20">Total number of pouches you used today:</string>
-
-    <string name="question21">Please mark the number that best represents how using the test product
+    <string name="question9a">Please mark the number that best represents how using the test product
         made you feel
     </string>
-    <string name="question22">Overall, is the test product a product you would likely use on a
+    <string name="question9b">Overall, is the test product a product you would likely use on a
         regular basis?
     </string>
-    <string name="question23">Was using the test product satisfying?</string>
-    <string name="question24">Did the test product taste good?</string>
-    <string name="question25">Did you enjoy using the test product?</string>
-    <string name="question26">Did you enjoy the amount of tobacco taste in the test product?
+    <string name="question9c">Was using the test product satisfying?</string>
+    <string name="question9d">Did the test product taste good?</string>
+    <string name="question9e">Did you enjoy using the test product?</string>
+    <string name="question9f">Did you enjoy the amount of tobacco taste in the test product?
     </string>
-    <string name="question27">How likely are you to replace your current pouch product with the test
+    <string name="question9g">How likely are you to replace your current pouch product with the test
         product?
     </string>
 

@@ -26,16 +26,11 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -56,9 +51,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -296,25 +289,7 @@ public class Utils {
         }
         return json;
     }
-
-    public static int getHourFromServerTime () {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Calendar calendar = Calendar.getInstance ();
-        try {
-            calendar.setTime (simpleDateFormat.parse (Constants.server_time));
-//            Log.e ("date", "" + calendar.get (Calendar.DAY_OF_MONTH));
-//            Log.e ("month", "" + calendar.get (Calendar.MONTH));
-//            Log.e ("year", "" + calendar.get (Calendar.YEAR));
-//            Log.e ("hour", "" + calendar.get (Calendar.HOUR));
-//            Log.e ("minutes", "" + calendar.get (Calendar.MINUTE));
-//            Log.e ("seconds", "" + calendar.get (Calendar.SECOND));
-            return calendar.get (calendar.HOUR_OF_DAY);
-        } catch (ParseException e) {
-            e.printStackTrace ();
-        }
-        return 0;
-    }
-
+    
     public static float convertPixelsToDp (float px, Context context) {
         Resources resources = context.getResources ();
         DisplayMetrics metrics = resources.getDisplayMetrics ();
@@ -541,75 +516,7 @@ public class Utils {
         }
     }
     
-    public static void makeTextViewResizable (final TextView tv, final int maxLine, final String expandText, final boolean viewMore) {
-        if (tv.getTag () == null) {
-            tv.setTag (tv.getText ());
-        }
-        ViewTreeObserver vto = tv.getViewTreeObserver ();
-        vto.addOnGlobalLayoutListener (new ViewTreeObserver.OnGlobalLayoutListener () {
-            @SuppressWarnings("deprecation")
-            @Override
-            public void onGlobalLayout () {
-                ViewTreeObserver obs = tv.getViewTreeObserver ();
-                obs.removeGlobalOnLayoutListener (this);
-                if (maxLine == 0) {
-                    int lineEndIndex = tv.getLayout ().getLineEnd (0);
-                    String text = tv.getText ().subSequence (0, lineEndIndex - expandText.length () + 1) + " " + expandText;
-                    tv.setText (text);
-                    tv.setMovementMethod (LinkMovementMethod.getInstance ());
-                    tv.setText (
-                            addClickablePartTextViewResizable (Html.fromHtml (tv.getText ().toString ()), tv, maxLine, expandText,
-                                    viewMore), TextView.BufferType.SPANNABLE);
-                } else if (maxLine > 0 && tv.getLineCount () >= maxLine) {
-                    int lineEndIndex = tv.getLayout ().getLineEnd (maxLine - 1);
-                    String text = tv.getText ().subSequence (0, lineEndIndex - expandText.length () + 1) + " " + expandText;
-                    tv.setText (text);
-                    tv.setMovementMethod (LinkMovementMethod.getInstance ());
-                    tv.setText (
-                            addClickablePartTextViewResizable (Html.fromHtml (tv.getText ().toString ()), tv, maxLine, expandText,
-                                    viewMore), TextView.BufferType.SPANNABLE);
-                } else {
-                    int lineEndIndex = tv.getLayout ().getLineEnd (tv.getLayout ().getLineCount () - 1);
-                    String text = tv.getText ().subSequence (0, lineEndIndex) + " " + expandText;
-                    tv.setText (text);
-                    tv.setMovementMethod (LinkMovementMethod.getInstance ());
-                    tv.setText (
-                            addClickablePartTextViewResizable (Html.fromHtml (tv.getText ().toString ()), tv, lineEndIndex, expandText,
-                                    viewMore), TextView.BufferType.SPANNABLE);
-                }
-            }
-        });
-        
-    }
     
-    private static SpannableStringBuilder addClickablePartTextViewResizable (final Spanned strSpanned, final TextView tv,
-                                                                             final int maxLine, final String spanableText, final boolean viewMore) {
-        String str = strSpanned.toString ();
-        SpannableStringBuilder ssb = new SpannableStringBuilder (strSpanned);
-        
-        if (str.contains (spanableText)) {
-            
-            
-            ssb.setSpan (new MySpannable (false) {
-                @Override
-                public void onClick (View widget) {
-                    if (viewMore) {
-                        tv.setLayoutParams (tv.getLayoutParams ());
-                        tv.setText (tv.getTag ().toString (), TextView.BufferType.SPANNABLE);
-                        tv.invalidate ();
-                        makeTextViewResizable (tv, - 1, "...less", false); ////see less enter the blank space if require the need as per requirement the project
-                    } else {
-                        tv.setLayoutParams (tv.getLayoutParams ());
-                        tv.setText (tv.getTag ().toString (), TextView.BufferType.SPANNABLE);
-                        tv.invalidate ();
-                        makeTextViewResizable (tv, 2, ".. more", true);
-                    }
-                }
-            }, str.indexOf (spanableText), str.indexOf (spanableText) + spanableText.length (), 0);
-            
-        }
-        return ssb;
-    }
     
   /*  public static void startShimmer (ShimmerFrameLayout shimmerFrameLayout) {
         shimmerFrameLayout.useDefaults ();

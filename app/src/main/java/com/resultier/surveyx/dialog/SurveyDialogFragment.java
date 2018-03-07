@@ -20,7 +20,7 @@ import com.resultier.surveyx.utils.Utils;
 import java.util.Calendar;
 
 
-public class DefaultSurveyDialogFragment extends DialogFragment {
+public class SurveyDialogFragment extends DialogFragment {
     String time = "";
     int button1 = 0;
     int button2 = 0;
@@ -54,8 +54,8 @@ public class DefaultSurveyDialogFragment extends DialogFragment {
     private EditText etAnswer8b;
     private int mHour, mMinute;
     
-    public static DefaultSurveyDialogFragment newInstance (int button1, int button2, int button3, int button4) {
-        DefaultSurveyDialogFragment f = new DefaultSurveyDialogFragment ();
+    public static SurveyDialogFragment newInstance (int button1, int button2, int button3, int button4) {
+        SurveyDialogFragment f = new SurveyDialogFragment ();
         Bundle args = new Bundle ();
         args.putInt ("Button 1", button1);
         args.putInt ("Button 2", button2);
@@ -91,7 +91,7 @@ public class DefaultSurveyDialogFragment extends DialogFragment {
     
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate (R.layout.fragment_dialog_default, container, false);
+        View root = inflater.inflate (R.layout.fd_end_day, container, false);
         initView (root);
         initBundle ();
         initData ();

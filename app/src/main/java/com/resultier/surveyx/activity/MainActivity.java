@@ -9,7 +9,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.resultier.surveyx.R;
-import com.resultier.surveyx.dialog.DefaultSurveyDialogFragment;
+import com.resultier.surveyx.dialog.FinalSurveyDialogFragment;
+import com.resultier.surveyx.dialog.SurveyDialogFragment;
 import com.resultier.surveyx.utils.UserDetailsPref;
 import com.resultier.surveyx.utils.Utils;
 
@@ -63,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
     }
     
     private void initListener () {
+        tvProductCode.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                FragmentTransaction ft = getFragmentManager ().beginTransaction ();
+                FinalSurveyDialogFragment frag = FinalSurveyDialogFragment.newInstance ();
+                frag.show (ft, "4");
+            }
+        });
+        
         rlButton1.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
@@ -80,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 tvButton2.setVisibility (View.VISIBLE);
             }
         });
+    
         rlButton3.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
@@ -88,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 tvButton3.setVisibility (View.VISIBLE);
             }
         });
+    
         rlButton4.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
@@ -101,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick (View v) {
                 FragmentTransaction ft = getFragmentManager ().beginTransaction ();
-                DefaultSurveyDialogFragment frag = DefaultSurveyDialogFragment.newInstance (button1, button2, button3, button4);
+                SurveyDialogFragment frag = SurveyDialogFragment.newInstance (button1, button2, button3, button4);
                 frag.show (ft, "4");
             }
         });
