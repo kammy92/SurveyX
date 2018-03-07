@@ -53,7 +53,7 @@
     <color name="hint_color_white">#88ffffff</color>
     <color name="text_color_black">#000000</color>
     <color name="text_color_silver">#c0c0c0</color>
-    <color name="text_color_grey_light">#bebebe</color>
+    <color name="text_color_grey_light">#eeeeee</color>
     <color name="text_color_grey_light2">#e0e0da</color>
     <color name="text_color_grey_dark">#858585</color>
     <color name="text_color_grey_dark2">#4b4b4b</color>

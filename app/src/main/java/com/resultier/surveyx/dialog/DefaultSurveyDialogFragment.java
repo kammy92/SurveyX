@@ -3,58 +3,64 @@ package com.resultier.surveyx.dialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.TimePickerDialog;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.RadioButton;
 import android.widget.TimePicker;
 
 import com.resultier.surveyx.R;
+import com.resultier.surveyx.utils.Utils;
 
 import java.util.Calendar;
 
 
 public class DefaultSurveyDialogFragment extends DialogFragment {
     String time = "";
+    int button1 = 0;
+    int button2 = 0;
+    int button3 = 0;
+    int button4 = 0;
     private ImageView ivCancel;
-    private TextView tvTitle;
-    private View v1;
-    private RelativeLayout rl1;
-    private TextView tvQuestion1;
-    private EditText etQuestion1Date;
-    private TextView tvQuestion2;
-    private EditText etQuestion2Date;
-    private TextView tvQuestion3;
-    private LinearLayout tbCheckBoxes;
-    private CheckBox cb1;
-    private CheckBox cb2;
-    private CheckBox cb3;
-    private CheckBox cb4;
-    private CheckBox cb5;
-    private CheckBox cb6;
-    private RelativeLayout rlQuestion4;
-    private TextView tvQuestion4;
-    private LinearLayout llCheckBoxes2;
-    private CheckBox cb7;
-    private CheckBox cb8;
-    private CheckBox cb9;
+    private EditText etAnswer1;
+    private EditText etAnswer2;
+    private LinearLayout llQuestion4;
+    private RadioButton rb1, rb2, rb3, rb4, rb5, rb6;
+    private RadioButton rb7, rb8, rb9;
+    private EditText etAnswer5;
+    private LinearLayout llQuestion5;
+    private EditText etAnswer5a;
+    private EditText etAnswer5b;
+    private EditText etAnswer5c;
+    private EditText etAnswer5d;
+    private EditText etAnswer6;
+    private LinearLayout llQuestion6;
+    private EditText etAnswer6a;
+    private EditText etAnswer6b;
+    private EditText etAnswer6c;
+    private EditText etAnswer6d;
+    private EditText etAnswer7;
+    private LinearLayout llQuestion7;
+    private EditText etAnswer7b;
+    private EditText etAnswer7c;
+    private EditText etAnswer8;
+    private LinearLayout llQuestion8;
+    private EditText etAnswer8a;
+    private EditText etAnswer8b;
     private int mHour, mMinute;
     
-    public static DefaultSurveyDialogFragment newInstance () {
+    public static DefaultSurveyDialogFragment newInstance (int button1, int button2, int button3, int button4) {
         DefaultSurveyDialogFragment f = new DefaultSurveyDialogFragment ();
         Bundle args = new Bundle ();
+        args.putInt ("Button 1", button1);
+        args.putInt ("Button 2", button2);
+        args.putInt ("Button 3", button3);
+        args.putInt ("Button 4", button4);
         f.setArguments (args);
         return f;
     }
@@ -70,11 +76,6 @@ public class DefaultSurveyDialogFragment extends DialogFragment {
         super.onActivityCreated (arg0);
         Window window = getDialog ().getWindow ();
         window.getAttributes ().windowAnimations = R.style.DialogAnimation;
-        if (Build.VERSION.SDK_INT >= 21) {
-            window.clearFlags (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.addFlags (WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor (ContextCompat.getColor (getActivity (), R.color.text_color_white));
-        }
     }
     
     @Override
@@ -100,80 +101,227 @@ public class DefaultSurveyDialogFragment extends DialogFragment {
     
     private void initView (View root) {
         ivCancel = (ImageView) root.findViewById (R.id.ivCancel);
-        tvTitle = (TextView) root.findViewById (R.id.tvTitle);
-        v1 = (View) root.findViewById (R.id.v1);
-        rl1 = (RelativeLayout) root.findViewById (R.id.rl1);
-        tvQuestion1 = (TextView) root.findViewById (R.id.tvQuestion1);
-        etQuestion1Date = (EditText) root.findViewById (R.id.etQuestion1Date);
-        tvQuestion2 = (TextView) root.findViewById (R.id.tvQuestion2);
-        etQuestion2Date = (EditText) root.findViewById (R.id.etQuestion2Date);
-        tvQuestion3 = (TextView) root.findViewById (R.id.tvQuestion3);
-        tbCheckBoxes = (LinearLayout) root.findViewById (R.id.tbCheckBoxes);
-        cb1 = (CheckBox) root.findViewById (R.id.cb1);
-        cb2 = (CheckBox) root.findViewById (R.id.cb2);
-        cb3 = (CheckBox) root.findViewById (R.id.cb3);
-        cb4 = (CheckBox) root.findViewById (R.id.cb4);
-        cb5 = (CheckBox) root.findViewById (R.id.cb5);
-        cb6 = (CheckBox) root.findViewById (R.id.cb6);
-        rlQuestion4 = (RelativeLayout) root.findViewById (R.id.rlQuestion4);
-        tvQuestion4 = (TextView) root.findViewById (R.id.tvQuestion4);
-        llCheckBoxes2 = (LinearLayout) root.findViewById (R.id.llCheckBoxes2);
-        cb7 = (CheckBox) root.findViewById (R.id.cb7);
-        cb8 = (CheckBox) root.findViewById (R.id.cb8);
-        cb9 = (CheckBox) root.findViewById (R.id.cb9);
+        etAnswer1 = (EditText) root.findViewById (R.id.etAnswer1);
+        etAnswer2 = (EditText) root.findViewById (R.id.etAnswer2);
+        rb1 = (RadioButton) root.findViewById (R.id.rb1);
+        rb2 = (RadioButton) root.findViewById (R.id.rb2);
+        rb3 = (RadioButton) root.findViewById (R.id.rb3);
+        rb4 = (RadioButton) root.findViewById (R.id.rb4);
+        rb5 = (RadioButton) root.findViewById (R.id.rb5);
+        rb6 = (RadioButton) root.findViewById (R.id.rb6);
+        llQuestion4 = (LinearLayout) root.findViewById (R.id.llQuestion4);
+        rb7 = (RadioButton) root.findViewById (R.id.rb7);
+        rb8 = (RadioButton) root.findViewById (R.id.rb8);
+        rb9 = (RadioButton) root.findViewById (R.id.rb9);
+    
+        etAnswer5 = (EditText) root.findViewById (R.id.etAnswer5);
+        llQuestion5 = (LinearLayout) root.findViewById (R.id.llQuestion5);
+        etAnswer5a = (EditText) root.findViewById (R.id.etAnswer5a);
+        etAnswer5b = (EditText) root.findViewById (R.id.etAnswer5b);
+        etAnswer5c = (EditText) root.findViewById (R.id.etAnswer5c);
+        etAnswer5d = (EditText) root.findViewById (R.id.etAnswer5d);
+    
+        etAnswer6 = (EditText) root.findViewById (R.id.etAnswer6);
+        llQuestion6 = (LinearLayout) root.findViewById (R.id.llQuestion6);
+        etAnswer6a = (EditText) root.findViewById (R.id.etAnswer6a);
+        etAnswer6c = (EditText) root.findViewById (R.id.etAnswer6c);
+        etAnswer6d = (EditText) root.findViewById (R.id.etAnswer6d);
+    
+        etAnswer7 = (EditText) root.findViewById (R.id.etAnswer7);
+        llQuestion7 = (LinearLayout) root.findViewById (R.id.llQuestion7);
+        etAnswer7b = (EditText) root.findViewById (R.id.etAnswer7b);
+        etAnswer7c = (EditText) root.findViewById (R.id.etAnswer7c);
+    
+        etAnswer8 = (EditText) root.findViewById (R.id.etAnswer8);
+        llQuestion8 = (LinearLayout) root.findViewById (R.id.llQuestion8);
+        etAnswer8a = (EditText) root.findViewById (R.id.etAnswer8a);
+        etAnswer8b = (EditText) root.findViewById (R.id.etAnswer8b);
     }
     
     private void initBundle () {
         Bundle bundle = this.getArguments ();
+        button1 = bundle.getInt ("Button 1", 0);
+        button2 = bundle.getInt ("Button 2", 0);
+        button3 = bundle.getInt ("Button 3", 0);
+        button4 = bundle.getInt ("Button 4", 0);
     }
     
     private void initData () {
-        rlQuestion4.setVisibility (View.GONE);
-        
+        Utils.setTypefaceToAllViews (getActivity (), etAnswer1);
+    
+        if (button1 > 0) {
+            etAnswer5.setText ("YES");
+            llQuestion5.setVisibility (View.VISIBLE);
+            etAnswer5a.setText (String.valueOf (button1));
+        } else {
+            etAnswer5.setText ("NO");
+            llQuestion5.setVisibility (View.GONE);
+        }
+    
+        if (button2 > 0) {
+            etAnswer6.setText ("YES");
+            llQuestion6.setVisibility (View.VISIBLE);
+            etAnswer6a.setText (String.valueOf (button2));
+        } else {
+            etAnswer6.setText ("NO");
+            llQuestion6.setVisibility (View.GONE);
+        }
+    
+        if (button3 > 0) {
+            etAnswer7.setText ("YES");
+            llQuestion7.setVisibility (View.VISIBLE);
+            etAnswer7b.setText (String.valueOf (button3));
+        } else {
+            etAnswer7.setText ("NO");
+            llQuestion7.setVisibility (View.GONE);
+        }
+    
+        if (button4 > 0) {
+            etAnswer8.setText ("YES");
+            llQuestion8.setVisibility (View.VISIBLE);
+            etAnswer8a.setText (String.valueOf (button4));
+        } else {
+            etAnswer8.setText ("NO");
+            llQuestion8.setVisibility (View.GONE);
+        }
     }
     
     private void initListener () {
-        
-        etQuestion1Date.setOnClickListener (new View.OnClickListener () {
+        etAnswer1.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View view) {
-                
-                
                 final Calendar c = Calendar.getInstance ();
                 mHour = c.get (Calendar.HOUR_OF_DAY);
                 mMinute = c.get (Calendar.MINUTE);
                 TimePickerDialog timePickerDialog = new TimePickerDialog (getActivity (), new TimePickerDialog.OnTimeSetListener () {
                     @Override
                     public void onTimeSet (TimePicker view, int hourOfDay, int minute) {
-                        etQuestion1Date.setText (String.format ("%02d", hourOfDay) + ":" + String.format ("%02d", minute));
-                        time = etQuestion1Date.getText ().toString ().trim ();
-                        Log.e ("time", time);
+                        if (hourOfDay >= 12) {
+                            if (hourOfDay == 12) {
+                                etAnswer1.setText (String.format ("%02d", hourOfDay) + ":" + String.format ("%02d", minute) + " PM");
+                            } else {
+                                etAnswer1.setText (String.format ("%02d", hourOfDay - 12) + ":" + String.format ("%02d", minute) + " PM");
+                            }
+                        } else {
+                            etAnswer1.setText (String.format ("%02d", hourOfDay) + ":" + String.format ("%02d", minute) + " AM");
+                        }
                     }
                 }, mHour, mMinute, false);
                 timePickerDialog.show ();
                 
             }
         });
-        
-        
-        etQuestion2Date.setOnClickListener (new View.OnClickListener () {
+    
+        etAnswer2.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View view) {
-                
-                
                 final Calendar c = Calendar.getInstance ();
                 mHour = c.get (Calendar.HOUR_OF_DAY);
                 mMinute = c.get (Calendar.MINUTE);
                 TimePickerDialog timePickerDialog = new TimePickerDialog (getActivity (), new TimePickerDialog.OnTimeSetListener () {
                     @Override
                     public void onTimeSet (TimePicker view, int hourOfDay, int minute) {
-                        etQuestion2Date.setText (String.format ("%02d", hourOfDay) + ":" + String.format ("%02d", minute));
-                        time = etQuestion2Date.getText ().toString ().trim ();
-                        Log.e ("time", time);
+                        if (hourOfDay >= 12) {
+                            if (hourOfDay == 12) {
+                                etAnswer2.setText (String.format ("%02d", hourOfDay) + ":" + String.format ("%02d", minute) + " PM");
+                            } else {
+                                etAnswer2.setText (String.format ("%02d", hourOfDay - 12) + ":" + String.format ("%02d", minute) + " PM");
+                            }
+                        } else {
+                            etAnswer2.setText (String.format ("%02d", hourOfDay) + ":" + String.format ("%02d", minute) + " AM");
+                        }
                     }
                 }, mHour, mMinute, false);
                 timePickerDialog.show ();
                 
+            }
+        });
+        rb1.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb6.setChecked (false);
+                rb2.setChecked (false);
+                rb3.setChecked (false);
+                rb4.setChecked (false);
+                rb5.setChecked (false);
+                llQuestion4.setVisibility (View.GONE);
+            }
+        });
+        rb2.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb1.setChecked (false);
+                rb6.setChecked (false);
+                rb3.setChecked (false);
+                rb4.setChecked (false);
+                rb5.setChecked (false);
+                llQuestion4.setVisibility (View.GONE);
+            }
+        });
+        rb3.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb1.setChecked (false);
+                rb2.setChecked (false);
+                rb6.setChecked (false);
+                rb4.setChecked (false);
+                rb5.setChecked (false);
+                llQuestion4.setVisibility (View.GONE);
+            }
+        });
+        rb4.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb1.setChecked (false);
+                rb2.setChecked (false);
+                rb3.setChecked (false);
+                rb6.setChecked (false);
+                rb5.setChecked (false);
+                llQuestion4.setVisibility (View.GONE);
+            }
+        });
+        rb5.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb1.setChecked (false);
+                rb2.setChecked (false);
+                rb3.setChecked (false);
+                rb4.setChecked (false);
+                rb6.setChecked (false);
+                llQuestion4.setVisibility (View.GONE);
+            }
+        });
+        rb6.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb1.setChecked (false);
+                rb2.setChecked (false);
+                rb3.setChecked (false);
+                rb4.setChecked (false);
+                rb5.setChecked (false);
+                llQuestion4.setVisibility (View.VISIBLE);
+            }
+        });
+    
+        rb7.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb8.setChecked (false);
+                rb9.setChecked (false);
+            }
+        });
+        rb8.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb7.setChecked (false);
+                rb9.setChecked (false);
+            }
+        });
+        rb9.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                rb7.setChecked (false);
+                rb8.setChecked (false);
             }
         });
         
@@ -183,16 +331,5 @@ public class DefaultSurveyDialogFragment extends DialogFragment {
                 getDialog ().dismiss ();
             }
         });
-        
-        
-        cb6.setOnCheckedChangeListener (new CompoundButton.OnCheckedChangeListener () {
-            @Override
-            public void onCheckedChanged (CompoundButton compoundButton, boolean b) {
-                rlQuestion4.setVisibility (View.VISIBLE);
-            }
-        });
-        
     }
-    
-    
 }

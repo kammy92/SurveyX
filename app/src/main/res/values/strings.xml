@@ -102,23 +102,131 @@
     <string name="question4">If you checked Moist smokeless/dip, which product did you use as your
         first tobacco product today?
     </string>
-    <string name="question5">Total number of times you used the pouches</string>
-    <string name="question6">Total number of pouches you used today</string>
-    <string name="question7">What was the least amount of time in minutes you kept the pouches
+    <string name="question5">Did you used the
+        <u>
+            <b>POUCH PRODUCT PROVIDED</b>
+        </u>
+        to you today?
+    </string>
+    <string name="question5a">
+        <b>
+            <u>Total number of times</u>
+        </b>
+        you used the pouches
+    </string>
+    <string name="question5b">
+        <b>
+            <u>Total number of pouches</u>
+        </b>
+        you used today
+    </string>
+    <string name="question5c">What was the
+        <b>
+            <u>least</u>
+        </b>
+        amount of time <b>in minutes</b> you kept the pouches
         provided to you in your mouth today?
     </string>
-    <string name="question8">What was the most amount of time in minutes you kept the pouches
+    <string name="question5d">What was the
+        <u>
+            <b>most</b>
+        </u>
+        amount of time <b>in minutes</b> you kept the pouches
         provided to you in your mouth today?
     </string>
-    <string name="question9">Total number of times you used the loose product today:</string>
-    <string name="question10">Approximately how much of a can of your own loose product did you use
+    <string name="question6">Did you use
+        <u>
+            <b>YOU OWN LOOSE PRODUCT</b>
+        </u>
+        today?
+    </string>
+    <string name="question6a">
+        <b>
+            <u>Total number of times</u>
+        </b>
+        you used the loose product today:
+    </string>
+    <string name="question6b">Approximately
+        <b>
+            <u>how much of a can</u>
+        </b>
+        of your own loose product did you use
         today:
     </string>
-    <string name="question11">What was the least amount of time in minutes you kept your own loose
+    <string name="question6c">What was the
+        <b>
+            <u>least</u>
+        </b>
+        amount of time <b>in minutes</b> you kept your own loose
         dip in your mouth today?
     </string>
-    <string name="question12">What was the most amount of time in minutes you kept your own loose
+    <string name="question6d">What was the
+        <b>
+            <u>most</u>
+        </b>
+        amount of time <b>in minutes</b> you kept your own loose
         dip in your mouth today?
+    </string>
+
+    <string name="question7">Did you use a
+        <b>
+            <u>DIFFERENT TOBACCO PRODUCT</u>
+        </b>
+        today?
+    </string>
+    <string name="question7a">What other tobacco product(s) did you use? (Mark ALL that apply)
+    </string>
+    <string name="question7b">
+        <b>
+            <u>Total number of times</u>
+        </b>
+        you used another tobacco product today?
+    </string>
+    <string name="question7c">
+        <b>
+            <u>Total number of cigarettes</u>
+        </b>
+        you used today?
+    </string>
+
+    <string name="question8">Did you use
+        <b>
+            <u>YOUR OWN POUCH PRODUCT</u>
+        </b>
+        today?
+    </string>
+    <string name="question8a">
+        <b>
+            <u>Total Number of times</u>
+        </b>
+        you used your own pouches today?
+    </string>
+    <string name="question8b">
+        <b>
+            <u>Total Number of pouches</u>
+        </b>
+        you used today?
+    </string>
+
+
+    <string name="question17">Make a check mark each time you use your own pouches:</string>
+    <string name="question18">Mark the number of pouches you used each time:</string>
+    <string name="question19">Total number of times you used the pouches today</string>
+    <string name="question20">Total number of pouches you used today:</string>
+
+    <string name="question21">Please mark the number that best represents how using the test product
+        made you feel
+    </string>
+    <string name="question22">Overall, is the test product a product you would likely use on a
+        regular basis?
+    </string>
+    <string name="question23">Was using the test product satisfying?</string>
+    <string name="question24">Did the test product taste good?</string>
+    <string name="question25">Did you enjoy using the test product?</string>
+    <string name="question26">Did you enjoy the amount of tobacco taste in the test product?
+    </string>
+    <string name="question27">How likely are you to replace your current pouch product with the test
+        product?
     </string>
 
 
