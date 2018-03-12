@@ -21,6 +21,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.LoginActivity"/>
+
+
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"/>
+        <service
+            android:name=".service.AlarmService"/>
+
+
     </application>
 
 </manifest>

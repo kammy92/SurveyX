@@ -1,6 +1,8 @@
 package com.resultier.surveyx.activity;
 
+import android.app.AlarmManager;
 import android.app.FragmentTransaction;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 import com.resultier.surveyx.R;
 import com.resultier.surveyx.dialog.FinalSurveyDialogFragment;
 import com.resultier.surveyx.dialog.SurveyDialogFragment;
+import com.resultier.surveyx.service.AlarmService;
 import com.resultier.surveyx.utils.UserDetailsPref;
 import com.resultier.surveyx.utils.Utils;
 
@@ -27,15 +30,14 @@ public class MainActivity extends AppCompatActivity {
     int button3 = 0; // Different Tobacco Product
     int button4 = 0; // Your Own Pouch Product
     
-    
     RelativeLayout rlButton1, rlButton2, rlButton3, rlButton4;
     TextView tvButton1, tvButton2, tvButton3, tvButton4;
-    
     
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
+//        setAlarm ();
         initView ();
         initData ();
         initListener ();
@@ -56,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         tvButton2 = (TextView) findViewById (R.id.tvNumber2);
         tvButton3 = (TextView) findViewById (R.id.tvNumber3);
         tvButton4 = (TextView) findViewById (R.id.tvNumber4);
-    
     }
     
     private void initData () {
@@ -117,6 +118,14 @@ public class MainActivity extends AppCompatActivity {
                 frag.show (ft, "4");
             }
         });
+    }
+    
+    public void setAlarm () {
+        AlarmManager alarmManager = (AlarmManager) this.getSystemService (this.ALARM_SERVICE);
+        long when = System.currentTimeMillis ();         // notification time
+        Intent intent = new Intent (this, AlarmService.class);
+        PendingIntent pendingIntent = PendingIntent.getService (this, 0, intent, 0);
+        alarmManager.setRepeating (AlarmManager.RTC, when, (AlarmManager.INTERVAL_FIFTEEN_MINUTES / 15), pendingIntent);
     }
     
     private void isLogin () {
