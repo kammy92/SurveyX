@@ -26,7 +26,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="Survey"
-            android:textColor="@color/primary_text2"
+            android:textColor="@color/primary_text"
             android:textSize="@dimen/text_size_large"
             android:textStyle="bold"/>
 
@@ -70,7 +70,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9a"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <LinearLayout
                         android:id="@+id/tbCheckBoxes10"
@@ -89,14 +89,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Not at all"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rbVeryLittle"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Very little"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="A little"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
 
 
                             <RadioButton
@@ -120,7 +120,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Moderately"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="A lot"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
 
                             <RadioButton
                                 android:id="@+id/rbQuiteALot"
@@ -143,7 +143,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Quite a lot"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
 
                         </LinearLayout>
                         <LinearLayout
@@ -157,7 +157,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Extremely"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -178,7 +178,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9b"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
                         android:id="@+id/etAnswer9b"
@@ -190,7 +190,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -210,7 +210,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9c"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
                         android:id="@+id/etAnswer9c"
@@ -222,7 +222,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -242,7 +242,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9d"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
                         android:id="@+id/etAnswer9d"
@@ -254,7 +254,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -274,7 +274,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9e"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
                         android:id="@+id/etAnswer9e"
@@ -286,7 +286,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -306,7 +306,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9f"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
                         android:id="@+id/etAnswer9f"
@@ -318,7 +318,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -339,7 +339,7 @@
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question9g"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
                         android:id="@+id/etAnswer9g"
@@ -351,7 +351,7 @@
                         android:background="@null"
                         android:gravity="center"
                         android:padding="@dimen/activity_margin_small"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
                 </LinearLayout>

@@ -224,4 +224,7 @@
     </string>
 
 
+    <string name="please_enter_survey_id">Please enter survey id</string>
+    <string name="please_enter_valid_password">Please enter valid password</string>
+
 </resources>

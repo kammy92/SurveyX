@@ -26,7 +26,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="Survey"
-            android:textColor="@color/primary_text2"
+            android:textColor="@color/primary_text"
             android:textSize="@dimen/text_size_large"
             android:textStyle="bold"/>
         <View
@@ -68,7 +68,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question1"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <EditText
                         android:id="@+id/etAnswer1"
@@ -80,7 +80,7 @@
                         android:focusable="false"
                         android:gravity="center"
                         android:hint=""
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -99,7 +99,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question2"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <EditText
                         android:id="@+id/etAnswer2"
@@ -111,7 +111,7 @@
                         android:focusable="false"
                         android:gravity="center"
                         android:hint=""
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -130,7 +130,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question3"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -148,7 +148,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Cigarettes"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rb2"
                                 android:layout_width="0dp"
@@ -156,7 +156,7 @@
                                 android:layout_column="2"
                                 android:layout_weight="1"
                                 android:text="Chewing Tobacco"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -169,14 +169,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Cigars/Cigarillos"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rb4"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Snus Pouches"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -189,14 +189,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="e-Cigarettes &amp; other e-vapor"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rb6"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Moist smokeless tobacco/dip"
-                                android:textColor="@color/primary_text2"/>
+                                android:textColor="@color/primary_text"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -216,7 +216,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question4"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -229,21 +229,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="The Pouch Product Provided to you"
-                            android:textColor="@color/primary_text2"/>
+                            android:textColor="@color/primary_text"/>
 
                         <RadioButton
                             android:id="@+id/rb8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Your OWN Loose Product"
-                            android:textColor="@color/primary_text2"/>
+                            android:textColor="@color/primary_text"/>
 
                         <RadioButton
                             android:id="@+id/rb9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Your OWN Pouch Product"
-                            android:textColor="@color/primary_text2"/>
+                            android:textColor="@color/primary_text"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -268,7 +268,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question5"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <EditText
                         android:id="@+id/etAnswer5"
@@ -279,7 +279,7 @@
                         android:background="@null"
                         android:focusable="false"
                         android:gravity="center"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold"/>
 
@@ -304,7 +304,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question5a"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer5a"
@@ -317,7 +317,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -334,7 +334,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question5b"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer5b"
@@ -346,7 +346,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -363,7 +363,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question5c"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <RelativeLayout
                             android:layout_width="0dp"
@@ -379,7 +379,7 @@
                                 android:gravity="center"
                                 android:inputType="number"
                                 android:maxLength="3"
-                                android:textColor="@color/primary_text2"
+                                android:textColor="@color/primary_text"
                                 android:textSize="@dimen/text_size_small"
                                 android:textStyle="bold"/>
                             <TextView
@@ -405,7 +405,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question5d"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <RelativeLayout
                             android:layout_width="0dp"
@@ -421,7 +421,7 @@
                                 android:gravity="center"
                                 android:inputType="number"
                                 android:maxLength="3"
-                                android:textColor="@color/primary_text2"
+                                android:textColor="@color/primary_text"
                                 android:textSize="@dimen/text_size_small"
                                 android:textStyle="bold"/>
                             <TextView
@@ -457,7 +457,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question6"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <EditText
                         android:id="@+id/etAnswer6"
@@ -468,7 +468,7 @@
                         android:background="@null"
                         android:focusable="false"
                         android:gravity="center"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -492,7 +492,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question6a"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer6a"
@@ -505,7 +505,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -523,7 +523,7 @@
                             android:gravity="center"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question5b"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <RadioGroup
                             android:layout_width="match_parent"
@@ -583,7 +583,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question6c"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <RelativeLayout
                             android:layout_width="0dp"
@@ -598,7 +598,7 @@
                                 android:gravity="center"
                                 android:inputType="number"
                                 android:maxLength="3"
-                                android:textColor="@color/primary_text2"
+                                android:textColor="@color/primary_text"
                                 android:textSize="@dimen/text_size_small"
                                 android:textStyle="bold"/>
                             <TextView
@@ -625,7 +625,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question6d"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <RelativeLayout
                             android:layout_width="0dp"
@@ -640,7 +640,7 @@
                                 android:gravity="center"
                                 android:inputType="number"
                                 android:maxLength="3"
-                                android:textColor="@color/primary_text2"
+                                android:textColor="@color/primary_text"
                                 android:textSize="@dimen/text_size_small"
                                 android:textStyle="bold"/>
                             <TextView
@@ -676,7 +676,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question7"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <EditText
                         android:id="@+id/etAnswer7"
@@ -687,7 +687,7 @@
                         android:background="@null"
                         android:focusable="false"
                         android:gravity="center"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -712,7 +712,7 @@
                             android:gravity="center"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question7a"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -766,7 +766,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question7b"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer7b"
@@ -779,7 +779,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -796,7 +796,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question7c"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer7c"
@@ -808,7 +808,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -835,7 +835,7 @@
                         android:background="@drawable/bg_question2"
                         android:padding="@dimen/activity_margin_small"
                         android:text="@string/question8"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"/>
                     <EditText
                         android:id="@+id/etAnswer8"
@@ -846,7 +846,7 @@
                         android:background="@null"
                         android:focusable="false"
                         android:gravity="center"
-                        android:textColor="@color/primary_text2"
+                        android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_small"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -870,7 +870,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question8a"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer8a"
@@ -883,7 +883,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>
@@ -900,7 +900,7 @@
                             android:background="@drawable/bg_question2"
                             android:padding="@dimen/activity_margin_small"
                             android:text="@string/question8b"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <EditText
                             android:id="@+id/etAnswer8b"
@@ -912,7 +912,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:maxLength="3"
-                            android:textColor="@color/primary_text2"
+                            android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"
                             android:textStyle="bold"/>
                     </LinearLayout>

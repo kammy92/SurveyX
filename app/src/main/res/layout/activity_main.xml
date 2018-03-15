@@ -114,9 +114,20 @@
             android:id="@+id/ll1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/tvEndDay"
+            android:layout_above="@+id/rlEndDay"
             android:gravity="center_vertical"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_margin"
+                android:gravity="center"
+                android:text="Please track the number of times you use each throughout the day. "
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"/>
+
             <RelativeLayout
                 android:id="@+id/rlButton1"
                 android:layout_width="wrap_content"
@@ -134,20 +145,49 @@
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"
                     android:visibility="visible"/>
-                <TextView
-                    android:id="@+id/tvNumber1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+
+                <RelativeLayout
+                    android:id="@+id/ll11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_margin_small"
-                    android:background="@drawable/circle"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/text_color_white"
-                    android:textSize="@dimen/text_size_large"
-                    android:textStyle="bold"
-                    android:visibility="gone"/>
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_margin_small"
+                    android:background="@drawable/button_background"
+                    android:padding="@dimen/activity_margin_extra_small">
+                    <ImageView
+                        android:id="@+id/ivMinus1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_minus"/>
+                    <TextView
+                        android:id="@+id/tvNumber1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_margin_small"
+                        android:layout_marginLeft="@dimen/activity_margin_small"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:layout_marginStart="@dimen/activity_margin_small"
+                        android:layout_toEndOf="@+id/ivMinus1"
+                        android:layout_toRightOf="@+id/ivMinus1"
+                        android:text="0"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:id="@+id/ivPlus1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toEndOf="@+id/tvNumber1"
+                        android:layout_toRightOf="@+id/tvNumber1"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_plus"/>
+                </RelativeLayout>
+
 
             </RelativeLayout>
             <RelativeLayout
@@ -169,20 +209,48 @@
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"
                     android:visibility="visible"/>
-                <TextView
-                    android:id="@+id/tvNumber2"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                <RelativeLayout
+                    android:id="@+id/ll12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_margin_small"
-                    android:background="@drawable/circle"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/text_color_white"
-                    android:textSize="@dimen/text_size_large"
-                    android:textStyle="bold"
-                    android:visibility="gone"/>
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_margin_small"
+                    android:background="@drawable/button_background"
+                    android:padding="@dimen/activity_margin_extra_small">
+                    <ImageView
+                        android:id="@+id/ivMinus2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_minus"/>
+                    <TextView
+                        android:id="@+id/tvNumber2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_margin_small"
+                        android:layout_marginLeft="@dimen/activity_margin_small"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:layout_marginStart="@dimen/activity_margin_small"
+                        android:layout_toEndOf="@+id/ivMinus2"
+                        android:layout_toRightOf="@+id/ivMinus2"
+                        android:text="0"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:id="@+id/ivPlus2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toEndOf="@+id/tvNumber2"
+                        android:layout_toRightOf="@+id/tvNumber2"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_plus"/>
+                </RelativeLayout>
+
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rlButton3"
@@ -202,20 +270,47 @@
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"
                     android:visibility="visible"/>
-                <TextView
-                    android:id="@+id/tvNumber3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                <RelativeLayout
+                    android:id="@+id/ll13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_margin_small"
-                    android:background="@drawable/circle"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/text_color_white"
-                    android:textSize="@dimen/text_size_large"
-                    android:textStyle="bold"
-                    android:visibility="gone"/>
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_margin_small"
+                    android:background="@drawable/button_background"
+                    android:padding="@dimen/activity_margin_extra_small">
+                    <ImageView
+                        android:id="@+id/ivMinus3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_minus"/>
+                    <TextView
+                        android:id="@+id/tvNumber3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_margin_small"
+                        android:layout_marginLeft="@dimen/activity_margin_small"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:layout_marginStart="@dimen/activity_margin_small"
+                        android:layout_toEndOf="@+id/ivMinus3"
+                        android:layout_toRightOf="@+id/ivMinus3"
+                        android:text="0"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:id="@+id/ivPlus3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toEndOf="@+id/tvNumber3"
+                        android:layout_toRightOf="@+id/tvNumber3"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_plus"/>
+                </RelativeLayout>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/rlButton4"
@@ -235,33 +330,76 @@
                     android:textSize="@dimen/text_size_small"
                     android:textStyle="bold"
                     android:visibility="visible"/>
-                <TextView
-                    android:id="@+id/tvNumber4"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                <RelativeLayout
+                    android:id="@+id/ll14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="@dimen/activity_margin_small"
-                    android:background="@drawable/circle"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/text_color_white"
-                    android:textSize="@dimen/text_size_large"
-                    android:textStyle="bold"
-                    android:visibility="gone"/>
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/activity_margin_small"
+                    android:background="@drawable/button_background"
+                    android:padding="@dimen/activity_margin_extra_small">
+                    <ImageView
+                        android:id="@+id/ivMinus4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_minus"/>
+                    <TextView
+                        android:id="@+id/tvNumber4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/activity_margin_small"
+                        android:layout_marginLeft="@dimen/activity_margin_small"
+                        android:layout_marginRight="@dimen/activity_margin_small"
+                        android:layout_marginStart="@dimen/activity_margin_small"
+                        android:layout_toEndOf="@+id/ivMinus4"
+                        android:layout_toRightOf="@+id/ivMinus4"
+                        android:text="0"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textStyle="bold"/>
+                    <ImageView
+                        android:id="@+id/ivPlus4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_toEndOf="@+id/tvNumber4"
+                        android:layout_toRightOf="@+id/tvNumber4"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_plus"/>
+                </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>
-        <TextView
-            android:id="@+id/tvEndDay"
+        <RelativeLayout
+            android:id="@+id/rlEndDay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="@color/primary_text"
-            android:gravity="center"
-            android:padding="@dimen/activity_margin"
-            android:text="END DAY"
-            android:textColor="@color/text_color_white"
-            android:textSize="@dimen/text_size_small"
-            android:textStyle="bold"/>
+            android:background="@color/primary_text">
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+
+                android:src="@drawable/ic_right_arrow"/>
+            <TextView
+                android:id="@+id/tvEndDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/activity_margin"
+                android:text="END OF THE DAY REPORT"
+                android:textColor="@color/text_color_white"
+                android:textSize="@dimen/text_size_small"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

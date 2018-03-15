@@ -5,11 +5,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class UserDetailsPref {
-    public static String USER_ID = "user_id";
     public static String USER_NAME = "user_name";
-    public static String USER_EMAIL = "user_email";
     public static String USER_MOBILE = "user_mobile";
+    public static String SURVEY_ID = "survey_id";
+    public static String SURVEY_STATUS = "survey_status";
+    public static String SURVEY_DAY_ELAPSED = "survey_days_elapsed";
+    public static String SURVEY_CONCLUSION = "survey_conclusion";
+    public static String SURVEY_LAB_REPORT = "survey_lab_report";
     public static String USER_LOGIN_KEY = "user_login_key";
+    public static String SURVEY_UNIQUE_ID = "survey_unique_id";
     public static String USER_FIREBASE_ID = "user_firebase_id";
     public static String LOGGED_IN_SESSION = "logged_in_session";
     private static UserDetailsPref userDetailsPref;

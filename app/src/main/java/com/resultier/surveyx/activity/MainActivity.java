@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDay;
     TextView tvDate;
     TextView tvProductCode;
-    TextView tvEndDay;
+    RelativeLayout rlEndDay;
     
     int button1 = 0; // Pouch Product Provided
     int button2 = 0; // Your Own Loose Product
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     
     RelativeLayout rlButton1, rlButton2, rlButton3, rlButton4;
     TextView tvButton1, tvButton2, tvButton3, tvButton4;
+    
+    ImageView ivMinus1, ivMinus2, ivMinus3, ivMinus4, ivPlus1, ivPlus2, ivPlus3, ivPlus4;
     
     @Override
     protected void onCreate (Bundle savedInstanceState) {
@@ -48,11 +51,23 @@ public class MainActivity extends AppCompatActivity {
         tvDay = (TextView) findViewById (R.id.tvDay);
         tvDate = (TextView) findViewById (R.id.tvDate);
         tvProductCode = (TextView) findViewById (R.id.tvProductCode);
-        tvEndDay = (TextView) findViewById (R.id.tvEndDay);
+        rlEndDay = (RelativeLayout) findViewById (R.id.rlEndDay);
+
         rlButton1 = (RelativeLayout) findViewById (R.id.rlButton1);
         rlButton2 = (RelativeLayout) findViewById (R.id.rlButton2);
         rlButton3 = (RelativeLayout) findViewById (R.id.rlButton3);
         rlButton4 = (RelativeLayout) findViewById (R.id.rlButton4);
+    
+    
+        ivMinus1 = (ImageView) findViewById (R.id.ivMinus1);
+        ivMinus2 = (ImageView) findViewById (R.id.ivMinus2);
+        ivMinus3 = (ImageView) findViewById (R.id.ivMinus3);
+        ivMinus4 = (ImageView) findViewById (R.id.ivMinus4);
+        ivPlus1 = (ImageView) findViewById (R.id.ivPlus1);
+        ivPlus2 = (ImageView) findViewById (R.id.ivPlus2);
+        ivPlus3 = (ImageView) findViewById (R.id.ivPlus3);
+        ivPlus4 = (ImageView) findViewById (R.id.ivPlus4);
+    
     
         tvButton1 = (TextView) findViewById (R.id.tvNumber1);
         tvButton2 = (TextView) findViewById (R.id.tvNumber2);
@@ -73,44 +88,78 @@ public class MainActivity extends AppCompatActivity {
                 frag.show (ft, "4");
             }
         });
-        
-        rlButton1.setOnClickListener (new View.OnClickListener () {
+    
+        ivMinus1.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                if (button1 > 0) {
+                    button1--;
+                    tvButton1.setText (String.valueOf (button1));
+                }
+            }
+        });
+    
+        ivMinus2.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                if (button2 > 0) {
+                    button2--;
+                    tvButton2.setText (String.valueOf (button2));
+                }
+            }
+        });
+        ivMinus3.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                if (button3 > 0) {
+                    button3--;
+                    tvButton3.setText (String.valueOf (button3));
+                }
+            }
+        });
+        ivMinus4.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick (View v) {
+                if (button4 > 0) {
+                    button4--;
+                    tvButton4.setText (String.valueOf (button4));
+                }
+            }
+        });
+    
+        ivPlus1.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
                 button1++;
                 tvButton1.setText (String.valueOf (button1));
-                tvButton1.setVisibility (View.VISIBLE);
             }
         });
     
-        rlButton2.setOnClickListener (new View.OnClickListener () {
+        ivPlus2.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
                 button2++;
                 tvButton2.setText (String.valueOf (button2));
-                tvButton2.setVisibility (View.VISIBLE);
             }
         });
     
-        rlButton3.setOnClickListener (new View.OnClickListener () {
+        ivPlus3.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
                 button3++;
                 tvButton3.setText (String.valueOf (button3));
-                tvButton3.setVisibility (View.VISIBLE);
             }
         });
     
-        rlButton4.setOnClickListener (new View.OnClickListener () {
+        ivPlus4.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
                 button4++;
                 tvButton4.setText (String.valueOf (button4));
-                tvButton4.setVisibility (View.VISIBLE);
             }
         });
     
-        tvEndDay.setOnClickListener (new View.OnClickListener () {
+        rlEndDay.setOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick (View v) {
                 FragmentTransaction ft = getFragmentManager ().beginTransaction ();

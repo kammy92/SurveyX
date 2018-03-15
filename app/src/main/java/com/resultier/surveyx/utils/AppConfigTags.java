@@ -33,5 +33,18 @@ public class AppConfigTags {
 
 
     public static final String PAGE_NUMBER = "PAGE_NUMBER";
+    
+    
+    public static final String LOGIN_ID = "login_id";
+    public static final String LOGIN_PASSWORD = "login_password";
+    public static final String SURVEY_ID = "survey_id";
+    public static final String USER_NAME = "user_name";
+    public static final String USER_LOGIN_KEY = "user_login_key";
+    public static final String SURVEY_UNIQUE_ID = "survey_unique_id";
+    public static final String USER_MOBILE = "user_mobile";
+    
+    public static final String SURVEY_STATUS = "survey_status";
+    public static final String SURVEY_DAY_ELAPSED = "survey_days_elapsed";
+    public static final String SURVEY_CONCLUSION = "survey_conclusion";
+    public static final String SURVEY_LAB_REPORT = "survey_lab_report";
 }
-
