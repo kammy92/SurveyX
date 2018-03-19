@@ -3,7 +3,6 @@
 
 
 
-    <string name="please_enter_name">Please enter Username</string>
     <string name="please_enter_email">Please enter Email</string>
     <string name="please_enter_mobile">Please enter Mobile</string>
     <string name="please_enter_valid_email">Please enter valid Email</string>
@@ -99,9 +98,18 @@
     <string name="question1">About what time did you wake up today?</string>
     <string name="question2">About what time did you have your first tobacco product today?</string>
     <string name="question3">What was the first tobacco product you used today?</string>
+    <string name="question3a">Cigarettes</string>
+    <string name="question3b">Chewing Tobacco</string>
+    <string name="question3c">Cigars/Cigarillos</string>
+    <string name="question3d">Snus Pouches</string>
+    <string name="question3e">e-Cigarettes &amp; other e-vapor</string>
+    <string name="question3f">Moist smokeless tobacco/dip</string>
     <string name="question4">If you checked Moist smokeless/dip, which product did you use as your
         first tobacco product today?
     </string>
+    <string name="question4a">The Pouch Product Provided to you</string>
+    <string name="question4b">Your OWN Loose Product</string>
+    <string name="question4c">Your OWN Pouch Product</string>
     <string name="question5">Did you used the
         <u>
             <b>POUCH PRODUCT PROVIDED</b>
@@ -153,6 +161,13 @@
         of your own loose product did you use
         today:
     </string>
+    <string name="question6b1">Less than ¼ of a can</string>
+    <string name="question6b2">About ¼ of a can</string>
+    <string name="question6b3">About ½ of a can</string>
+    <string name="question6b4">About ¾ of a can</string>
+    <string name="question6b5">About 1 can</string>
+    <string name="question6b6">More than 1 can</string>
+
     <string name="question6c">What was the
         <b>
             <u>least</u>
@@ -176,6 +191,12 @@
     </string>
     <string name="question7a">What other tobacco product(s) did you use? (Mark ALL that apply)
     </string>
+    <string name="question7a1">Cigarettes</string>
+    <string name="question7a2">Cigars/cigarillos</string>
+    <string name="question7a3">E-cigarettes/e-vapor</string>
+    <string name="question7a4">Chewing Tobacco</string>
+    <string name="question7a5">Snus Pouches</string>
+
     <string name="question7b">
         <b>
             <u>Total number of times</u>
@@ -224,7 +245,8 @@
     </string>
 
 
-    <string name="please_enter_survey_id">Please enter survey id</string>
-    <string name="please_enter_valid_password">Please enter valid password</string>
+    <string name="please_enter_user_id">Please enter User ID</string>
+    <string name="please_enter_survey_id">Please enter Survey #</string>
+    <string name="please_enter_password">Please enter Password</string>
 
 </resources>

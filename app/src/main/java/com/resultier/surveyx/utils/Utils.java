@@ -169,8 +169,8 @@ public class Utils {
         Typeface tf = SetTypeFace.getTypeface (activity);
         SetTypeFace.applyTypeface (activity, SetTypeFace.getParentView (view), tf);
     }
-
-    public static void showProgressDialog (ProgressDialog progressDialog, String message, boolean cancelable) {
+    
+    public static void showProgressDialog (Activity activity, ProgressDialog progressDialog, String message, boolean cancelable) {
         // Initialize the progressDialog before calling this function
         TextView tvMessage;
         progressDialog.show ();
@@ -180,9 +180,10 @@ public class Utils {
         if (message != null) {
             tvMessage.setText (message);
             tvMessage.setVisibility (View.VISIBLE);
-        }
-        else
+            tvMessage.setTypeface (SetTypeFace.getTypeface (activity));
+        } else {
             tvMessage.setVisibility (View.GONE);
+        }
         progressDialog.setCancelable (cancelable);
     }
 

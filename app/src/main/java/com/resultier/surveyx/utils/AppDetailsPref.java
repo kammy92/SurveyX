@@ -4,29 +4,34 @@ package com.resultier.surveyx.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class UserDetailsPref {
+public class AppDetailsPref {
     public static String USER_NAME = "user_name";
     public static String USER_MOBILE = "user_mobile";
+    public static String USER_LOGIN_KEY = "user_login_key";
     public static String SURVEY_ID = "survey_id";
+    public static String SURVEY_NUMBER = "survey_number";
     public static String SURVEY_STATUS = "survey_status";
     public static String SURVEY_DAY_ELAPSED = "survey_days_elapsed";
-    public static String SURVEY_CONCLUSION = "survey_conclusion";
-    public static String SURVEY_LAB_REPORT = "survey_lab_report";
-    public static String USER_LOGIN_KEY = "user_login_key";
-    public static String SURVEY_UNIQUE_ID = "survey_unique_id";
-    public static String USER_FIREBASE_ID = "user_firebase_id";
-    public static String LOGGED_IN_SESSION = "logged_in_session";
-    private static UserDetailsPref userDetailsPref;
-    private String USER_DETAILS = "USER_DETAILS";
+    public static String PRODUCT_ID = "product_id";
+    public static String PRODUCT_CODE = "product_code";
     
-    public static UserDetailsPref getInstance () {
-        if (userDetailsPref == null)
-            userDetailsPref = new UserDetailsPref ();
-        return userDetailsPref;
+    public static String BUTTON1 = "button1";
+    public static String BUTTON2 = "button2";
+    public static String BUTTON3 = "button3";
+    public static String BUTTON4 = "button4";
+    
+    
+    private static AppDetailsPref appDetailsPref;
+    private String APP_DETAILS = "APP_DETAILS";
+    
+    public static AppDetailsPref getInstance () {
+        if (appDetailsPref == null)
+            appDetailsPref = new AppDetailsPref ();
+        return appDetailsPref;
     }
 
     private SharedPreferences getPref (Context context) {
-        return context.getSharedPreferences (USER_DETAILS, Context.MODE_PRIVATE);
+        return context.getSharedPreferences (APP_DETAILS, Context.MODE_PRIVATE);
     }
 
     public String getStringPref (Context context, String key) {

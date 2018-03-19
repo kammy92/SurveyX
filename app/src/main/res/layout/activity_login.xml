@@ -24,7 +24,6 @@
             android:padding="@dimen/activity_margin"
             android:visibility="visible">
             <TextView
-                android:id="@+id/tvFieldsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -36,10 +35,9 @@
                 android:textSize="@dimen/text_size_large"
                 android:textStyle="bold"/>
             <TextView
-                android:id="@+id/tvUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="USERID"
+                android:text="USER ID"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"
@@ -49,16 +47,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_background"
-                android:inputType="textEmailAddress"
+                android:inputType="textVisiblePassword"
+                android:text="9873684678"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_medium"
                 android:visibility="visible"/>
             <TextView
-                android:id="@+id/tvPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_margin"
-                android:text="PASSCODE"
+                android:text="PASSWORD"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"
@@ -72,6 +70,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/et_background"
                     android:inputType="textPassword"
+                    android:text="123456"
                     android:textColor="@color/primary_text"
                     android:textSize="@dimen/text_size_medium"
                     android:visibility="visible"/>
@@ -94,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_margin"
-                android:text="SURVEY ID"
+                android:text="SURVEY #"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"
@@ -105,7 +104,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/activity_margin"
                 android:background="@drawable/et_background"
-                android:inputType="text"
+                android:inputType="textVisiblePassword|textCapCharacters"
+                android:text="pk123456"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_medium"
                 android:visibility="visible"/>
@@ -132,7 +132,8 @@
                 android:padding="@dimen/activity_margin"
                 android:text="START SURVEY"
                 android:textColor="@color/text_color_white"
-                android:textSize="@dimen/text_size_large"/>
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"/>
         </LinearLayout>
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

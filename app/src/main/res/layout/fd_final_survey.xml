@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/text_color_white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_color_white">
 
         <ImageView
             android:id="@+id/ivCancel"
@@ -58,6 +58,7 @@
                 android:paddingBottom="@dimen/activity_margin">
 
                 <LinearLayout
+                    android:id="@+id/llAnswer9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_question"
@@ -106,7 +107,7 @@
 
 
                             <RadioButton
-                                android:id="@+id/rbAlittle"
+                                android:id="@+id/rbALittle"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -161,15 +162,14 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-
                 <LinearLayout
+                    android:id="@+id/llAnswer9a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
                     android:background="@drawable/bg_question"
                     android:orientation="vertical"
                     android:weightSum="4">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
                         android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
-                        android:id="@+id/etAnswer9b"
+                        android:id="@+id/etAnswer9a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -195,6 +195,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer9b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -213,7 +214,7 @@
                         android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
-                        android:id="@+id/etAnswer9c"
+                        android:id="@+id/etAnswer9b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -227,6 +228,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer9c"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -245,7 +247,7 @@
                         android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
-                        android:id="@+id/etAnswer9d"
+                        android:id="@+id/etAnswer9c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -259,6 +261,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer9d"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -277,7 +280,7 @@
                         android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
-                        android:id="@+id/etAnswer9e"
+                        android:id="@+id/etAnswer9d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -291,6 +294,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer9e"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -309,7 +313,7 @@
                         android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
-                        android:id="@+id/etAnswer9f"
+                        android:id="@+id/etAnswer9e"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -323,6 +327,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer9f"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/activity_margin"
@@ -342,7 +347,7 @@
                         android:textColor="@color/primary_text"
                         android:textSize="@dimen/text_size_medium"/>
                     <EditText
-                        android:id="@+id/etAnswer9g"
+                        android:id="@+id/etAnswer9f"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

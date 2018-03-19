@@ -51,10 +51,10 @@
                 android:layout_marginRight="@dimen/activity_margin"
                 android:layout_marginTop="@dimen/activity_margin"
                 android:animateLayoutChanges="true"
-
                 android:orientation="vertical"
                 android:paddingBottom="32dp">
                 <LinearLayout
+                    android:id="@+id/llAnswer1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_question"
@@ -85,6 +85,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -116,6 +117,7 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/llAnswer3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -147,15 +149,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Cigarettes"
+                                android:text="@string/question3a"
                                 android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rb2"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_column="2"
                                 android:layout_weight="1"
-                                android:text="Chewing Tobacco"
+                                android:text="@string/question3b"
                                 android:textColor="@color/primary_text"/>
                         </LinearLayout>
                         <LinearLayout
@@ -168,14 +169,14 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Cigars/Cigarillos"
+                                android:text="@string/question3c"
                                 android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rb4"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Snus Pouches"
+                                android:text="@string/question3d"
                                 android:textColor="@color/primary_text"/>
                         </LinearLayout>
                         <LinearLayout
@@ -188,20 +189,20 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="e-Cigarettes &amp; other e-vapor"
+                                android:text="@string/question3e"
                                 android:textColor="@color/primary_text"/>
                             <RadioButton
                                 android:id="@+id/rb6"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Moist smokeless tobacco/dip"
+                                android:text="@string/question3f"
                                 android:textColor="@color/primary_text"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/llQuestion4"
+                    android:id="@+id/llAnswer4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/activity_margin"
@@ -228,21 +229,21 @@
                             android:id="@+id/rb7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="The Pouch Product Provided to you"
+                            android:text="@string/question4a"
                             android:textColor="@color/primary_text"/>
 
                         <RadioButton
                             android:id="@+id/rb8"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Your OWN Loose Product"
+                            android:text="@string/question4b"
                             android:textColor="@color/primary_text"/>
 
                         <RadioButton
                             android:id="@+id/rb9"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Your OWN Pouch Product"
+                            android:text="@string/question4c"
                             android:textColor="@color/primary_text"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -256,6 +257,7 @@
                     android:src="@drawable/dotted"/>
 
                 <LinearLayout
+                    android:id="@+id/llAnswer5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_question"
@@ -292,6 +294,7 @@
                     android:visibility="visible">
 
                     <LinearLayout
+                        android:id="@+id/llAnswer5a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -322,6 +325,7 @@
                             android:textStyle="bold"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer5b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -351,6 +355,7 @@
                             android:textStyle="bold"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer5c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -393,6 +398,7 @@
                         </RelativeLayout>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer5d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -445,6 +451,7 @@
                     android:src="@drawable/dotted"/>
 
                 <LinearLayout
+                    android:id="@+id/llAnswer6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_question"
@@ -480,6 +487,7 @@
                     android:visibility="visible">
 
                     <LinearLayout
+                        android:id="@+id/llAnswer6a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -510,6 +518,7 @@
                             android:textStyle="bold"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer6b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -526,6 +535,7 @@
                             android:textColor="@color/primary_text"
                             android:textSize="@dimen/text_size_small"/>
                         <RadioGroup
+                            android:id="@+id/rgAnswer6b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -534,43 +544,38 @@
                             android:orientation="vertical">
 
                             <RadioButton
-                                android:id="@+id/rb6b1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Less than ¼ of a can"/>
+                                android:text="@string/question6b1"/>
 
                             <RadioButton
-                                android:id="@+id/rb6b2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="About ¼ of a can"/>
+                                android:text="@string/question6b2"/>
 
                             <RadioButton
-                                android:id="@+id/rb6b3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="About ½ of a can"/>
+                                android:text="@string/question6b3"/>
 
                             <RadioButton
-                                android:id="@+id/rb6b4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="About ¾ of a can"/>
+                                android:text="@string/question6b4"/>
 
                             <RadioButton
-                                android:id="@+id/rb6b5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="About 1 can"/>
+                                android:text="@string/question6b5"/>
 
                             <RadioButton
-                                android:id="@+id/rb6b6"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="More than 1 can"/>
+                                android:text="@string/question6b6"/>
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer6c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -613,6 +618,7 @@
 
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer6d"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -664,6 +670,7 @@
                     android:src="@drawable/dotted"/>
 
                 <LinearLayout
+                    android:id="@+id/llAnswer7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_question"
@@ -699,6 +706,7 @@
                     android:visibility="visible">
 
                     <LinearLayout
+                        android:id="@+id/llAnswer7a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -726,34 +734,35 @@
                                 android:id="@+id/cb7a1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cigarettes"/>
+                                android:text="@string/question7a1"/>
 
                             <CheckBox
                                 android:id="@+id/cb7a2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Cigars/cigarillos"/>
+                                android:text="@string/question7a2"/>
 
                             <CheckBox
                                 android:id="@+id/cb7a3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="E-cigarettes/e-vapor"/>
+                                android:text="@string/question7a3"/>
 
                             <CheckBox
                                 android:id="@+id/cb7a4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Chewing Tobacco"/>
+                                android:text="@string/question7a4"/>
 
                             <CheckBox
                                 android:id="@+id/cb7a5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Snus Pouches"/>
+                                android:text="@string/question7a5"/>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer7b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -784,6 +793,7 @@
                             android:textStyle="bold"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer7c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -823,6 +833,7 @@
                     android:src="@drawable/dotted"/>
 
                 <LinearLayout
+                    android:id="@+id/llAnswer8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_question"
@@ -858,6 +869,7 @@
                     android:visibility="visible">
 
                     <LinearLayout
+                        android:id="@+id/llAnswer8a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
@@ -888,6 +900,7 @@
                             android:textStyle="bold"/>
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/llAnswer8b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_question"
