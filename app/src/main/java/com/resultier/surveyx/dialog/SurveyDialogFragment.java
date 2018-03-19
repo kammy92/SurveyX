@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,6 +27,7 @@ import com.android.volley.Request;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.resultier.surveyx.R;
+import com.resultier.surveyx.activity.MainActivity;
 import com.resultier.surveyx.utils.AppConfigTags;
 import com.resultier.surveyx.utils.AppConfigURL;
 import com.resultier.surveyx.utils.AppDetailsPref;
@@ -35,6 +37,7 @@ import com.resultier.surveyx.utils.Utils;
 
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -531,7 +534,7 @@ public class SurveyDialogFragment extends DialogFragment {
                 answer6d = etAnswer6d.getText ().toString ().trim ();
                 answer7c = etAnswer7c.getText ().toString ().trim ();
                 answer8b = etAnswer8b.getText ().toString ().trim ();
-            
+    
                 if (cbAnswer7aList.size () == 1) {
                     answer7a = cbAnswer7aList.get (0);
                 } else {
@@ -543,8 +546,8 @@ public class SurveyDialogFragment extends DialogFragment {
                         }
                     }
                 }
-            
-            
+    
+    
                 if (answer1.length () == 0) {
                     llAnswer1.setBackground (getResources ().getDrawable (R.drawable.bg_question_red));
                 } else {
@@ -650,12 +653,12 @@ public class SurveyDialogFragment extends DialogFragment {
                 } else {
                     llAnswer8b.setBackground (getResources ().getDrawable (R.drawable.bg_question));
                 }
-            
+    
                 int bt1 = 0;
                 int bt2 = 0;
                 int bt3 = 0;
                 int bt4 = 0;
-            
+    
                 if (button1 > 0) {
                     if (answer5.length () > 0 &&
                             answer5a.length () > 0 &&
@@ -667,7 +670,7 @@ public class SurveyDialogFragment extends DialogFragment {
                         bt1 = 2;
                     }
                 }
-            
+    
                 if (button2 > 0) {
                     if (answer6.length () > 0 &&
                             answer6a.length () > 0 &&
@@ -679,7 +682,7 @@ public class SurveyDialogFragment extends DialogFragment {
                         bt2 = 2;
                     }
                 }
-            
+    
                 if (button3 > 0) {
                     if (answer7.length () > 0 &&
                             answer7a.length () > 0 &&
@@ -690,7 +693,7 @@ public class SurveyDialogFragment extends DialogFragment {
                         bt3 = 2;
                     }
                 }
-            
+    
                 if (button4 > 0) {
                     if (answer8.length () > 0 &&
                             answer8a.length () > 0 &&
@@ -700,55 +703,59 @@ public class SurveyDialogFragment extends DialogFragment {
                         bt4 = 2;
                     }
                 }
-            
+    
                 if (answer1.length () > 0 &&
                         answer2.length () > 0 &&
                         answer3.length () > 0) {
                     if (answer3.equalsIgnoreCase (getResources ().getString (R.string.question3f))) {
                         if (answer4.length () > 0) {
                             if (bt1 != 2 && bt2 != 2 && bt3 != 2 && bt4 != 2) {
-                                Log.e ("karman", "all clear");
+                                sendSurveyDetailsToServer (answer1, answer2, answer3, answer4, answer5, answer5a, answer5b, answer5c, answer5d, answer6, answer6a, answer6b, answer6c, answer6d, answer7, answer7a, answer7b, answer7c, answer8, answer8a, answer8b);
                             }
                         }
                     } else {
                         if (bt1 != 2 && bt2 != 2 && bt3 != 2 && bt4 != 2) {
-                            Log.e ("karman", "all clear");
+                            sendSurveyDetailsToServer (answer1, answer2, answer3, answer4, answer5, answer5a, answer5b, answer5c, answer5d, answer6, answer6a, answer6b, answer6c, answer6d, answer7, answer7a, answer7b, answer7c, answer8, answer8a, answer8b);
                         }
                     }
                 }
-            
-            
-                Log.e ("answer1", answer1);
-                Log.e ("answer2", answer2);
-                Log.e ("answer3", answer3);
-                Log.e ("answer4", answer4);
-                Log.e ("answer5", answer5);
-                Log.e ("answer5a", answer5a);
-                Log.e ("answer5b", answer5b);
-                Log.e ("answer5c", answer5c);
-                Log.e ("answer5d", answer5d);
-                Log.e ("answer6", answer6);
-                Log.e ("answer6a", answer6a);
-                Log.e ("answer6b", answer6b);
-                Log.e ("answer6c", answer6c);
-                Log.e ("answer6d", answer6d);
-                Log.e ("answer7", answer7);
-                Log.e ("answer7a", answer7a);
-                Log.e ("answer7b", answer7b);
-                Log.e ("answer7c", answer7c);
-                Log.e ("answer8", answer8);
-                Log.e ("answer8a", answer8a);
-                Log.e ("answer8b", answer8b);
+
+//                Log.e ("answer1", answer1);
+//                Log.e ("answer2", answer2);
+//                Log.e ("answer3", answer3);
+//                Log.e ("answer4", answer4);
+//                Log.e ("answer5", answer5);
+//                Log.e ("answer5a", answer5a);
+//                Log.e ("answer5b", answer5b);
+//                Log.e ("answer5c", answer5c);
+//                Log.e ("answer5d", answer5d);
+//                Log.e ("answer6", answer6);
+//                Log.e ("answer6a", answer6a);
+//                Log.e ("answer6b", answer6b);
+//                Log.e ("answer6c", answer6c);
+//                Log.e ("answer6d", answer6d);
+//                Log.e ("answer7", answer7);
+//                Log.e ("answer7a", answer7a);
+//                Log.e ("answer7b", answer7b);
+//                Log.e ("answer7c", answer7c);
+//                Log.e ("answer8", answer8);
+//                Log.e ("answer8a", answer8a);
+//                Log.e ("answer8b", answer8b);
             }
         });
     }
     
-    
-    private void sendSurveyDetailsToServer (final String answer1, final String answer2, final String answer3, final String answer4, final String answer5, final String answer5a, final String answer5b
-            , final String answer5c, final String answer5d, final String answer6, final String answer6a, final String answer6b, final String answer6c
-            , final String answer6d, final String answer7, final String answer7a, final String answer7b, final String answer7c, final String answer8
-            , final String answer8a, final String answer8b) {
-        
+    private void sendSurveyDetailsToServer (final String answer1, final String answer2,
+                                            final String answer3, final String answer4,
+                                            final String answer5, final String answer5a,
+                                            final String answer5b, final String answer5c,
+                                            final String answer5d, final String answer6,
+                                            final String answer6a, final String answer6b,
+                                            final String answer6c, final String answer6d,
+                                            final String answer7, final String answer7a,
+                                            final String answer7b, final String answer7c,
+                                            final String answer8, final String answer8a,
+                                            final String answer8b) {
         if (NetworkConnection.isNetworkAvailable (getActivity ())) {
             Utils.showProgressDialog (getActivity (), progressDialog, getResources ().getString (R.string.progress_dialog_text_please_wait), true);
             Utils.showLog (Log.INFO, "" + AppConfigTags.URL, AppConfigURL.DAILY_SURVEY, true);
@@ -763,7 +770,19 @@ public class SurveyDialogFragment extends DialogFragment {
                                     boolean error = jsonObj.getBoolean (AppConfigTags.ERROR);
                                     String message = jsonObj.getString (AppConfigTags.MESSAGE);
                                     if (! error) {
-                                    
+                                        progressDialog.dismiss ();
+                                        getDialog ().dismiss ();
+    
+                                        appDetailsPref.putIntPref (getActivity (), AppDetailsPref.SURVEY_STATUS, jsonObj.getInt (AppConfigTags.SURVEY_STATUS));
+                                        appDetailsPref.putIntPref (getActivity (), AppDetailsPref.BUTTON1, 0);
+                                        appDetailsPref.putIntPref (getActivity (), AppDetailsPref.BUTTON2, 0);
+                                        appDetailsPref.putIntPref (getActivity (), AppDetailsPref.BUTTON3, 0);
+                                        appDetailsPref.putIntPref (getActivity (), AppDetailsPref.BUTTON4, 0);
+    
+                                        Intent newIntent = new Intent (getActivity (), MainActivity.class);
+                                        newIntent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        newIntent.addFlags (Intent.FLAG_ACTIVITY_NEW_TASK);
+                                        startActivity (newIntent);
                                     } else {
 //                                        Utils.showSnackBar (getActivity (), clMain, message, Snackbar.LENGTH_LONG, null, null);
                                     }
@@ -794,7 +813,10 @@ public class SurveyDialogFragment extends DialogFragment {
                     }) {
                 @Override
                 protected Map<String, String> getParams () throws AuthFailureError {
-                    Map<String, String> params = new Hashtable<String, String> ();
+                    Map<String, String> params = new Hashtable<> ();
+                    Calendar c = Calendar.getInstance ();
+                    SimpleDateFormat df = new SimpleDateFormat ("yyyy-MM-dd", Locale.US);
+                    
                     params.put (AppConfigTags.ANSWER_1, answer1);
                     params.put (AppConfigTags.ANSWER_2, answer2);
                     params.put (AppConfigTags.ANSWER_3, answer3);
@@ -816,9 +838,9 @@ public class SurveyDialogFragment extends DialogFragment {
                     params.put (AppConfigTags.ANSWER_8, answer8);
                     params.put (AppConfigTags.ANSWER_8A, answer8a);
                     params.put (AppConfigTags.ANSWER_8B, answer8b);
-                    params.put (AppConfigTags.SURVEY_ID, appDetailsPref.getStringPref (getActivity (), AppDetailsPref.SURVEY_ID));
+                    params.put (AppConfigTags.SURVEY_ID, String.valueOf (appDetailsPref.getIntPref (getActivity (), AppDetailsPref.SURVEY_ID)));
                     params.put (AppConfigTags.DAY_NUMBER, String.valueOf (appDetailsPref.getIntPref (getActivity (), AppDetailsPref.SURVEY_DAY_ELAPSED) + 1));
-                    params.put (AppConfigTags.DATE, "");
+                    params.put (AppConfigTags.DATE, df.format (c.getTime ()));
                     
                     Utils.showLog (Log.INFO, AppConfigTags.PARAMETERS_SENT_TO_THE_SERVER, "" + params, true);
                     return params;

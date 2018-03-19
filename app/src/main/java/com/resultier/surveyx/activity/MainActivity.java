@@ -156,7 +156,11 @@ public class MainActivity extends AppCompatActivity {
         }
     
         tvProductCode.setText ("Prod # " + appDetailsPref.getStringPref (this, AppDetailsPref.PRODUCT_CODE));
-        tvDay.setText ("Day : " + (appDetailsPref.getIntPref (this, AppDetailsPref.SURVEY_DAY_ELAPSED) + 1));
+        if (appDetailsPref.getIntPref (this, AppDetailsPref.SURVEY_DAY_ELAPSED) < 7) {
+            tvDay.setText ("Day : " + (appDetailsPref.getIntPref (this, AppDetailsPref.SURVEY_DAY_ELAPSED) + 1));
+        } else {
+            tvDay.setVisibility (View.GONE);
+        }
     
         Calendar c = Calendar.getInstance ();
         SimpleDateFormat df = new SimpleDateFormat ("dd/MM/yyyy", Locale.US);

@@ -326,7 +326,9 @@ public class FinalSurveyDialogFragment extends DialogFragment {
                                     if (! error) {
                                         progressDialog.dismiss ();
                                         getDialog ().dismiss ();
-                                        
+    
+                                        appDetailsPref.putIntPref (getActivity (), AppDetailsPref.SURVEY_STATUS, jsonObj.getInt (AppConfigTags.SURVEY_STATUS));
+    
                                         Intent newIntent = new Intent (getActivity (), MainActivity.class);
                                         newIntent.addFlags (Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                         newIntent.addFlags (Intent.FLAG_ACTIVITY_NEW_TASK);
