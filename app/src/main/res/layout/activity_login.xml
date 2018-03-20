@@ -93,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_margin"
-                android:text="SURVEY #"
+                android:text="PRODUCT CODE"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_small"
                 android:textStyle="bold"
@@ -105,7 +105,7 @@
                 android:layout_marginBottom="@dimen/activity_margin"
                 android:background="@drawable/et_background"
                 android:inputType="textVisiblePassword|textCapCharacters"
-                android:text="pk123456"
+                android:text="PK121212"
                 android:textColor="@color/primary_text"
                 android:textSize="@dimen/text_size_medium"
                 android:visibility="visible"/>

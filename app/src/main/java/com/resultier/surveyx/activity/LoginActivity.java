@@ -42,7 +42,7 @@ import java.util.Map;
 public class LoginActivity extends AppCompatActivity {
     EditText etUserName;
     EditText etPassword;
-    EditText etSurveyID;
+    EditText etProductCode;
     TextView tvStartSurvey;
     TextView tvShowHide;
     
@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         tvStartSurvey = (TextView) findViewById (R.id.tvStartSurvey);
         etUserName = (EditText) findViewById (R.id.etUserName);
         etPassword = (EditText) findViewById (R.id.etPassword);
-        etSurveyID = (EditText) findViewById (R.id.etSurveyID);
+        etProductCode = (EditText) findViewById (R.id.etSurveyID);
         tvShowHide = (TextView) findViewById (R.id.tvShowHide);
     }
     
@@ -91,13 +91,13 @@ public class LoginActivity extends AppCompatActivity {
                 if (etPassword.getText ().toString ().length () == 0) {
                     etPassword.setError (s2);
                 }
-                if (etSurveyID.getText ().toString ().length () == 0) {
-                    etSurveyID.setError (s3);
+                if (etProductCode.getText ().toString ().length () == 0) {
+                    etProductCode.setError (s3);
                 }
                 if ((etUserName.getText ().toString ().length () != 0) &&
                         (etPassword.getText ().toString ().length () != 0) &&
-                        (etSurveyID.getText ().toString ().length () != 0)) {
-                    sendLoginDetailsToServer (etUserName.getText ().toString (), etPassword.getText ().toString (), etSurveyID.getText ().toString ());
+                        (etProductCode.getText ().toString ().length () != 0)) {
+                    sendLoginDetailsToServer (etUserName.getText ().toString (), etPassword.getText ().toString (), etProductCode.getText ().toString ());
                 }
             }
         });
@@ -151,11 +151,11 @@ public class LoginActivity extends AppCompatActivity {
             public void afterTextChanged (Editable s) {
             }
         });
-        etSurveyID.addTextChangedListener (new TextWatcher () {
+        etProductCode.addTextChangedListener (new TextWatcher () {
             @Override
             public void onTextChanged (CharSequence s, int start, int before, int count) {
                 if (count == 0) {
-                    etSurveyID.setError (null);
+                    etProductCode.setError (null);
                 }
             }
         
@@ -169,7 +169,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
     
-    private void sendLoginDetailsToServer (final String user_name, final String password, final String survey_number) {
+    private void sendLoginDetailsToServer (final String user_name, final String password, final String product_code) {
         if (NetworkConnection.isNetworkAvailable (LoginActivity.this)) {
             Utils.showProgressDialog (LoginActivity.this, progressDialog, getResources ().getString (R.string.progress_dialog_text_please_wait), true);
             Utils.showLog (Log.INFO, "" + AppConfigTags.URL, AppConfigURL.LOGIN, true);
@@ -231,7 +231,7 @@ public class LoginActivity extends AppCompatActivity {
                     Map<String, String> params = new Hashtable<String, String> ();
                     params.put (AppConfigTags.LOGIN_ID, user_name);
                     params.put (AppConfigTags.LOGIN_PASSWORD, password);
-                    params.put (AppConfigTags.SURVEY_NUMBER, survey_number);
+                    params.put (AppConfigTags.PRODUCT_CODE, product_code);
                     Utils.showLog (Log.INFO, AppConfigTags.PARAMETERS_SENT_TO_THE_SERVER, "" + params, true);
                     return params;
                 }
