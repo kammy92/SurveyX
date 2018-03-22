@@ -168,7 +168,7 @@
                 android:id="@+id/rlMain"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="gone">
+                android:visibility="visible">
                 <LinearLayout
                     android:id="@+id/ll1"
                     android:layout_width="match_parent"
@@ -176,17 +176,27 @@
                     android:layout_above="@+id/rlEndDay"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/activity_margin"
+                        android:layout_marginLeft="@dimen/activity_margin"
+                        android:layout_marginRight="@dimen/activity_margin"
+                        android:layout_marginTop="@dimen/activity_margin"
                         android:gravity="center"
-                        android:text="Please track the number of times you use each throughout the day. "
+                        android:text="Please track the number of times you use each throughout the day."
                         android:textColor="@color/primary_text"
-                        android:textSize="@dimen/text_size_large"
+                        android:textSize="@dimen/text_size_medium"
                         android:textStyle="bold"/>
-
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_margin"
+                        android:layout_marginRight="@dimen/activity_margin"
+                        android:layout_marginTop="@dimen/activity_margin_small"
+                        android:gravity="center"
+                        android:text="Have questions or need assistance? Contact Field Support @ 1-800-642-3141"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_size_small"/>
                     <RelativeLayout
                         android:id="@+id/rlButton1"
                         android:layout_width="wrap_content"
